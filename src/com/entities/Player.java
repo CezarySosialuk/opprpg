@@ -1,6 +1,7 @@
 package com.entities;
 
 import java.util.Scanner;
+import com.Items.*;
 
 public class Player extends Creature {
     int strength=1;
@@ -10,6 +11,7 @@ public class Player extends Creature {
     int charisma=1;
 
     int gold;
+    Weapon weapon;
 
     public void playerCreator(){
         this.gold = 50;
@@ -55,10 +57,12 @@ public class Player extends Creature {
             }
             skillpoints--;
         }
-        scanner.close();
-    }
+        //scanner.close();
 
-    public void showInventory(){
+        weapon = ItemList.woodSowrd;
 
+        this.attack = this.strength + weapon.Get_Damage();
+        this.healthPoints = 5 + this.health;
     }
+    
 }

@@ -1,8 +1,9 @@
 package com.Items;
 
 public class item {
-    int id;
-    float weight; //in kg
-    int goldValue;
+    protected String name;
+    protected int id;
+    protected float weight; //in kg
+    protected int goldValue;
 
 }

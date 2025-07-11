@@ -7,6 +7,12 @@ public class Creature {
     protected int attack;
     protected int deffence;
 
+    public int Get_Health(){
+        return healthPoints;
+    }
+    public int Get_Attack(){
+        return attack;
+    }
 
     public void takeDamage(int damage){
         this.healthPoints -= (damage - this.deffence);
